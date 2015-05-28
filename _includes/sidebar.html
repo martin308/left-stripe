@@ -1,0 +1,20 @@
+<div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <h1 class="brand-title">{{ site.title }}</h1>
+        {% if site.description %}
+          <h2 class="brand-tagline">{{ site.description }}</h2>
+        {% endif %}
+
+        {% if site.data.sidebar %}
+          <nav class="nav">
+              <ul class="nav-list">
+                  {% for nav in site.data.sidebar %}
+                    <li class="nav-item">
+                        <a class="pure-button" href="{{ nav.url }}">{{ nav.title }}</a>
+                    </li>
+                  {% endfor %}
+              </ul>
+          </nav>
+        {% endif %}
+    </div>
+</div>
